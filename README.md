@@ -7,11 +7,14 @@ React Infinite Scroller
 
 以上，该项目主要用于 WorkPlusFE 内部。
 
+[![npm version](https://badge.fury.io/js/@w6s%2Freact-infinite-scroller.svg)](https://badge.fury.io/js/@w6s%2Freact-infinite-scroller)
+
 
 ```
+# npm
 npm install @w6s/react-infinite-scroller --save
-```
-```
+
+# yarn
 yarn add @w6s/react-infinite-scroller
 ```
 
