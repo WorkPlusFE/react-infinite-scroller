@@ -1,13 +1,9 @@
 {
-  "name": "react-infinite-scroller",
-  "version": "1.2.4",
+  "name": "@w6s/react-infinite-scroller",
+  "version": "1.2.5",
   "description": "Infinite scroll component for React in ES6",
   "main": "index.js",
   "jsnext:main": "src/InfiniteScroll.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/CassetteRocks/react-infinite-scroller.git"
-  },
   "scripts": {
     "build": "mkdirp dist && babel src/InfiniteScroll.js --out-file dist/InfiniteScroll.js",
     "prepublish": "npm run build",
@@ -22,16 +18,16 @@
       "git add"
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "infinite",
     "scroll",
     "react"
   ],
-  "author": "CassetteRocks",
+  "author": "WorkPlusFE",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/CassetteRocks/react-infinite-scroller/issues"
-  },
   "dependencies": {
     "prop-types": "^15.5.8"
   },
