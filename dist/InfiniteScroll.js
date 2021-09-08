@@ -115,10 +115,7 @@ var InfiniteScroll = (function(_Component) {
       value: function componentDidUpdate() {
         if (this.props.isReverse && this.loadMore) {
           var parentElement = this.getParentElement(this.scrollComponent);
-          parentElement.scrollTop =
-            parentElement.scrollHeight -
-            this.beforeScrollHeight +
-            this.beforeScrollTop;
+          parentElement.scrollTop = this.beforeOffset;
           this.loadMore = false;
         }
         this.attachScrollListener();
@@ -292,7 +289,9 @@ var InfiniteScroll = (function(_Component) {
               ? scrollEl.pageYOffset
               : doc.scrollTop;
           if (this.props.isReverse) {
-            offset = scrollTop;
+            // 在较新版 Chrome，flex-direction反转布局，会导致 parentNode.scrollTop 是负数
+            offset =
+              el.clientHeight + parentNode.scrollTop - parentNode.clientHeight;
           } else {
             offset = this.calculateOffset(el, scrollTop);
           }
@@ -312,6 +311,7 @@ var InfiniteScroll = (function(_Component) {
           this.detachScrollListener();
           this.beforeScrollHeight = parentNode.scrollHeight;
           this.beforeScrollTop = parentNode.scrollTop;
+          this.beforeOffset = offset;
           // Call loadMore after detachScrollListener to allow for non-async loadMore functions
           if (typeof this.props.loadMore === 'function') {
             this.props.loadMore((this.pageLoaded += 1));
