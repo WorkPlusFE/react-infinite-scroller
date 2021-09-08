@@ -7,6 +7,14 @@ React Infinite Scroller
 
 以上，该项目主要用于 WorkPlusFE 内部。
 
+
+```
+npm install @w6s/react-infinite-scroller --save
+```
+```
+yarn add @w6s/react-infinite-scroller
+```
+
 <hr/>
 
 
