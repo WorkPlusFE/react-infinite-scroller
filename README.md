@@ -1,13 +1,25 @@
 React Infinite Scroller
 =======================
 
-## 💣💣 必读 
+## ⚠️⚠️ 必读 
 
 该 Fork 主要是处理在高版本 Chrome 上，`flex-direction: column-reverse`会使父级组件的`scrollTop`变成负数，基于此，主要对`isReverse`开启的时候，进行了比较粗暴的处理，以保证滚动页面的计算不会出错。
 
 以上，该项目主要用于 WorkPlusFE 内部。
 
+[![npm version](https://badge.fury.io/js/@w6s%2Freact-infinite-scroller.svg)](https://badge.fury.io/js/@w6s%2Freact-infinite-scroller)
+
+
+```
+# npm
+npm install @w6s/react-infinite-scroller --save
+
+# yarn
+yarn add @w6s/react-infinite-scroller
+```
+
 <hr/>
+
 
 [![Travis](https://img.shields.io/travis/danbovey/react-infinite-scroller.svg?style=flat-square)](https://travis-ci.org/CassetteRocks/react-infinite-scroller)
 [![npm](https://img.shields.io/npm/dt/react-infinite-scroller.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroller)
